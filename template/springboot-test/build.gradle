@@ -35,4 +35,12 @@ dependencies {
 	testImplementation('org.springframework.boot:spring-boot-starter-test')
 }
 
+uploadArchives {
+    repositories {
+       flatDir {
+           dirs 'repos'
+       }
+    }
+}
+
 
