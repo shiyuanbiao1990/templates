@@ -20,9 +20,13 @@ apply plugin: 'io.spring.dependency-management'
 mainClassName = 'SpringgradleApplication'
 
 //生成的jar包包名和版本
+version = '1.0'
+
 jar {
-	baseName = 'springgradle'
-	version =  '1.0'
+	manifest {
+		attributes 'Implementation-Title': 'OpenFaaS Function',
+				'Implementation-Version': version
+	}
 }
 
 sourceCompatibility = 1.8
