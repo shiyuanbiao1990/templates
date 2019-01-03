@@ -37,7 +37,7 @@ RUN unzip ./function-1.0.zip
 RUN chown -R app /home/app
 USER app
 
-ENV upstream_url="http://127.0.0.1:8080"
+ENV upstream_url="http://127.0.0.1:8005"
 ENV mode="http"
 ENV CLASSPATH="/home/app/function-1.0/lib/*"
 
