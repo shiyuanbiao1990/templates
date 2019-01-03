@@ -41,7 +41,7 @@ ENV upstream_url="http://127.0.0.1:8080"
 ENV mode="http"
 ENV CLASSPATH="/home/app/springgradle-1.0/lib/*"
 
-ENV fprocess="java com.hiynn.springgradle.SpringgradleApplication"
+ENV fprocess="java SpringgradleApplication"
 EXPOSE 8080
 
 HEALTHCHECK --interval=2s CMD [ -e /tmp/.lock ] || exit 1
