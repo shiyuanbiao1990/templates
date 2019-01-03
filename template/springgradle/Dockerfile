@@ -31,17 +31,17 @@ RUN apk --no-cache add curl \
 
 RUN addgroup -S app && adduser -S -g app app
 WORKDIR /home/app
-COPY --from=builder /home/app/springgradle/build/distributions/springgradle-1.0.zip ./springgradle-1.0.zip
-RUN unzip ./springgradle-1.0.zip
+COPY --from=builder /home/app/function/build/distributions/function-1.0.zip ./function-1.0.zip
+RUN unzip ./function-1.0.zip
 
 RUN chown -R app /home/app
 USER app
 
 ENV upstream_url="http://127.0.0.1:8080"
 ENV mode="http"
-ENV CLASSPATH="/home/app/springgradle-1.0/lib/*"
+ENV CLASSPATH="/home/app/function-1.0/lib/*"
 
-ENV fprocess="java SpringgradleApplication"
+ENV fprocess="java FunctionApplication"
 EXPOSE 8080
 
 HEALTHCHECK --interval=2s CMD [ -e /tmp/.lock ] || exit 1
