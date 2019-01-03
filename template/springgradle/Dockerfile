@@ -42,7 +42,7 @@ ENV mode="http"
 ENV CLASSPATH="/home/app/function-1.0/lib/*"
 
 ENV fprocess="java FunctionApplication"
-EXPOSE 8080
+EXPOSE 8005
 
 HEALTHCHECK --interval=2s CMD [ -e /tmp/.lock ] || exit 1
 
