@@ -41,7 +41,7 @@ ENV upstream_url="http://127.0.0.1:8005"
 ENV mode="http"
 ENV CLASSPATH="/home/app/function-1.0/lib/*"
 
-ENV fprocess="java FunctionApplication"
+ENV fprocess="java com.openfaas.function.FunctionApplication"
 EXPOSE 8005
 
 HEALTHCHECK --interval=2s CMD [ -e /tmp/.lock ] || exit 1
