@@ -1,4 +1,4 @@
-FROM openjdk:8u121-jdk-alpine as builder
+FROM frolvlad/alpine-oraclejdk8:slim as builder
 
 RUN apk --no-cache add curl \
     && addgroup -S app && adduser -S -g app app \
