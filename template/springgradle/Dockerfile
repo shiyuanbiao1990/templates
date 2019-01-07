@@ -41,7 +41,7 @@ ENV upstream_url="http://127.0.0.1:8021"
 ENV mode="http"
 ENV CLASSPATH="/home/app/function-1.0/lib/*"
 
-ENV fprocess="java -jar /home/app/function-1.0.jar"
+ENV fprocess="java -jar function-1.0.jar"
 EXPOSE 8021
 
 HEALTHCHECK --interval=2s CMD [ -e /tmp/.lock ] || exit 1
