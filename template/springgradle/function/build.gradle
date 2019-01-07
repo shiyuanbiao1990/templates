@@ -18,9 +18,9 @@ apply plugin: 'io.spring.dependency-management'
 
 mainClassName = 'FunctionApplication'
 
+version = '1.0'
+
 jar {
-	baseName = 'function'
-	version = '1.0'
 	manifest {
 		attributes 'Implementation-Title': 'OpenFaaS Function',
 				'Implementation-Version': version
