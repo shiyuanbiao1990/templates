@@ -13,7 +13,7 @@ public class FunctionApplication {
 		SpringApplication.run(FunctionApplication.class, args);
 	}
 
-	@RequestMapping("/")
+	@RequestMapping("")
 	String home() {
 		return "Hello World!";//返回结果为字符串
 	}
