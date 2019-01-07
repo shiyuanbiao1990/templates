@@ -10,8 +10,9 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 public class SpringController {
-    @RequestMapping("/")
-    String home() {
-        return "Hello World!";//返回结果为字符串
+
+    @RequestMapping("/test")
+    String testMethod() {
+        return "I am shiyuanbiao!";//返回结果为字符串
     }
 }

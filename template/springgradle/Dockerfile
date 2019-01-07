@@ -37,12 +37,12 @@ RUN unzip ./function-1.0.zip
 RUN chown -R app /home/app
 USER app
 
-ENV upstream_url="http://127.0.0.1:8005"
+ENV upstream_url="http://127.0.0.1:8021"
 ENV mode="http"
 ENV CLASSPATH="/home/app/function-1.0/lib/*"
 
-ENV fprocess="java com.openfaas.function.FunctionApplication"
-EXPOSE 8005
+ENV fprocess="java -jar /home/app/function-1.0.jar"
+EXPOSE 8021
 
 HEALTHCHECK --interval=2s CMD [ -e /tmp/.lock ] || exit 1
 
