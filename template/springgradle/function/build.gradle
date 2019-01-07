@@ -23,7 +23,8 @@ version = '1.0'
 jar {
 	manifest {
 		attributes 'Implementation-Title': 'OpenFaaS Function',
-				'Implementation-Version': version
+				'Implementation-Version': version,
+				'Main-Class': 'com.openfaas.function.FunctionApplication'
 	}
 }
 
