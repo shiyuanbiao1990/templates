@@ -16,6 +16,9 @@ ENV PATH=$PATH:$GRADLE_HOME/bin
 RUN mkdir -p /home/app/libs
 
 ENV GRADLE_OPTS="-Dorg.gradle.daemon=false"
+
+ARG MESSAGE
+
 WORKDIR /home/app
 
 COPY . /home/app/
