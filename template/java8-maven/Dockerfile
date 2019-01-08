@@ -4,7 +4,7 @@ RUN apk --no-cache add curl \
     && addgroup -S app && adduser -S -g app app \
     && mkdir -p /opt/ && cd /opt/ \
     && echo "Downloading maven.." \
-    && curl http://apache-mirror.rbc.ru/pub/apache/maven/maven-3/3.6.0/binaries/apache-maven-3.6.0-bin.zip -o apache-maven-3.6.0-bin.zip \
+    && curl -SfL http://apache-mirror.rbc.ru/pub/apache/maven/maven-3/3.6.0/binaries/apache-maven-3.6.0-bin.zip -o apache-maven-3.6.0-bin.zip \
     && unzip apache-maven-3.6.0-bin.zip -d /opt/ \
     && rm apache-maven-3.6.0-bin.zip \
     && apk del curl
