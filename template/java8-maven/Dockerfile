@@ -19,6 +19,8 @@ WORKDIR /home/app
 
 COPY . /home/app/
 
+Run mvn package
+
 FROM openjdk:8u121-jdk-alpine as ship
 RUN apk --no-cache add curl \
     && echo "Pulling watchdog binary from Github." \
