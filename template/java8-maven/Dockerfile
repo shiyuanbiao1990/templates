@@ -19,8 +19,6 @@ WORKDIR /home/app
 
 COPY . /home/app/
 
-RUN maven build
-
 FROM openjdk:8u121-jdk-alpine as ship
 RUN apk --no-cache add curl \
     && echo "Pulling watchdog binary from Github." \
