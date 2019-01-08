@@ -87,7 +87,7 @@
 					<archive>
 						<!-- 清单文件，设置入口类和classpath -->
 						<manifest>
-							<mainClass>com.hdwang.Application</mainClass>
+							<mainClass>com.openfaas.entrypoint.App</mainClass>
 							<addClasspath>true</addClasspath>
 							<classpathPrefix>lib/</classpathPrefix>
 						</manifest>
