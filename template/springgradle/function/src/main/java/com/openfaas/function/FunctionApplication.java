@@ -1,5 +1,8 @@
 package com.openfaas.function;
 
+import com.openfaas.function.service.IHandlerService;
+import com.openfaas.function.service.impl.HandlerService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,12 +14,14 @@ public class FunctionApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(FunctionApplication.class, args);
+		IHandlerService handlerService = new HandlerService();
+		handlerService.Handler();
 	}
 
-	@RequestMapping("")
-	String home() {
-		return "Hello World!";//返回结果为字符串
-	}
+//	@RequestMapping("")
+//	public String get(){
+//		return "success";
+//	}
 
 }
 
