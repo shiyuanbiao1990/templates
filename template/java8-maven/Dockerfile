@@ -38,9 +38,9 @@ USER app
 
 ENV upstream_url="http://127.0.0.1:8080"
 ENV mode="http"
-ENV CLASSPATH="/home/app/entrypoint/entrypoint/*"
+ENV CLASSPATH="/home/app/entrypoint/*"
 
-ENV fprocess="java com.openfaas.entrypoint.App"
+ENV fprocess="java -jar /home/app/entrypoint/entrypoint.jar"
 EXPOSE 8025
 
 HEALTHCHECK --interval=2s CMD [ -e /tmp/.lock ] || exit 1
